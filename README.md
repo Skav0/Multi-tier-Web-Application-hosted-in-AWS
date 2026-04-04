@@ -10,6 +10,22 @@ This is my first AWS project showcasing how i built, designed and deployed a cus
     -changed labels.
 -See the Project_photos folder to see the project resources.
 Read the section below to understand what i did exactly:
-    ###
+###
+IN THE VPC:
 
-    ###
+Started by creating a vpc that points to 6 subnets(2 public, 4 private[2 excplicitly reserved for a database]). Each subnet is associated with its route table(2 private rts point to the private subnet, and 1 public rt points to two subnet[has the igw route so the vpc can reach the internet through it]).
+created the 2 security groups(1 for the load balancer and 1 for the internal instance) and configured their inbound/outbound rules.
+To be able for the clients to reach the servers i creatd two nat gws in different AZs for high availability. 
+
+IN THE EC2 SERVICE:
+
+created 2 instances and downloaded the apache server on them and added the web app html file in the /var/www/html/ folder. 
+I enabled and start the service so it can be available for the client on port 80.
+created an application load balancer so it can split the load "round robin" between the two instances.
+
+IN THE BROWSER:
+I copied the URL of the ALB pasted it on the my browser to see if the app works. and as you see in the "app_pic.png" photo on in the "web_app" folder the app works fine.
+###
+
+N.B:
+i didn't configure an auto scaling application yet. But i'll do that soon.
