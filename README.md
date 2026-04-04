@@ -16,6 +16,7 @@ IN THE VPC:
 Started by creating a vpc that points to 6 subnets(2 public, 4 private[2 excplicitly reserved for a database]). Each subnet is associated with its route table(2 private rts point to the private subnet, and 1 public rt points to two subnet[has the igw route so the vpc can reach the internet through it]).
 created the 2 security groups(1 for the load balancer and 1 for the internal instance) and configured their inbound/outbound rules.
 To be able for the clients to reach the servers i creatd two nat gws in different AZs for high availability. 
+When i created the NAT GWS and the ALBs, Elastic IP addresses where automatically associated to them.
 
 IN THE EC2 SERVICE:
 
