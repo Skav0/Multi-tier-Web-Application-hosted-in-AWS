@@ -8,3 +8,8 @@ This is my first AWS project showcasing how i built, designed and deployed a cus
     -modified the security group rules.
     -used different CIDR scope.
     -changed labels.
+-See the Project_photos folder to see the project resources.
+Read the section below to understand what i did exactly:
+    ###
+
+    ###
