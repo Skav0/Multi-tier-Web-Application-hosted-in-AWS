@@ -1,0 +1,7 @@
+sudo su 
+dnf install -y git
+git clone https://github.com/Skav0/Multi-tier-Web-Application-hosted-in-AWS.git
+dnf install -y httpd
+systemctl start httpd
+systemctl enable httpd
+cat index.html > /var/www/html/index.html 

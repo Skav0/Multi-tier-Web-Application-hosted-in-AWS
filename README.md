@@ -26,7 +26,13 @@ created an application load balancer so it can split the load "round robin" betw
 
 IN THE BROWSER:
 I copied the URL of the ALB pasted it on the my browser to see if the app works. and as you see in the "app_pic.png" photo on in the "web_app" folder the app works fine.
-###
 
-N.B:
-i didn't configure an auto scaling application yet. But i'll do that soon.
+
+CONFIGURING AUTO SCALING:
+
+
+
+
+
+
+###
