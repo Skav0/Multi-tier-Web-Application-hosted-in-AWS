@@ -30,8 +30,12 @@ I copied the URL of the ALB pasted it on the my browser to see if the app works.
 
 CONFIGURING AUTO SCALING:
 
+For the autoscaling is started by making a bash script "User data script" so i can include user data at instances launched by the auto scaling group(ASG).
+I created a launch template so the ASG can use it to scale out/in instances.
+Then i created the ASG.
+For the sake of simplicity i didn't include any scaling policy.
 
-
+I assigned the ALB with the ASG for the high availability and scalability. For that each new created instance by the ASG will be handled automatically to the ALB to do its load balancing.
 
 
 
